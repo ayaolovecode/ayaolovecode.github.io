@@ -73,6 +73,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CiscoNote1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/04/26/CiscoNote1/" class="article-date">
+  <time class="dt-published" datetime="2024-04-26T14:06:38.000Z" itemprop="datePublished">2024-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/04/26/CiscoNote1/">CiscoNote1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>上了一节 Cisco之后发现不做笔记真的不行啊….</p>
+<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>LAN ：局域网，一切的智能化终端设备都处于局域网。 手机 电脑 ipad 智能手表（具备网卡） – 家庭网络、企业网、园区网、校园网<br>MAN：城域网，<br>WAN：广域网，跨越地理位置环境的综合性网络，目前世界上最大的广域网是因特网–Internet </p>
+<p>上网所需要满足的条件—<br>①物理条件：传递信号的介质<br>②协议条件：TCP&#x2F;IP协议栈   IP协议– IP地址（ 在网络中用于唯一标识一台网络设备 。）</p>
+<p>IP地址的分类—首位  中间  中间  末尾<br>A类：首位的范围在1-126之间，10.1.1.1<br>B类：首位的范围在128-191之间，172.16.1.1<br>C类：首位的范围在192-223之间，192.168.131.206</p>
+<p>针对每一个IP地址，又细分为—<br>①网络位：网络的标识，范围。<br>②主机位：主机的标识，范围中的具体一个点。</p>
+<p>A类：10.100.100.100   网络位：10.0.0.0      网络中的地址数量：256^3&#x3D;2^24<br>B类：172.16.100.100   网络位：172.16.0.0    网络中的地址数量：256^2&#x3D;2^16<br>C类：192.168.10.100   网络位：192.168.10.0  网络中的地址数量：256&#x3D;2^8</p>
+<p>子网掩码：配置IP地址，后面一定要跟上子网掩码，否则无效；成对出现的，用于标识IP地址所处的网络范围 。<br>默认的子网掩码：<br>A类：255.0.0.0<br>B类：255.255.0.0<br>C类：255.255.255.0</p>
+<p>网络号：拿IP地址和子网掩码做一个与运算，得到网络号，代表一个网络范围 </p>
+<p>【三大基本网络设备】<br>Router：路由器，连接广域网的设备 。<br>Switch：交换机，连接局域网的设备 。<br>Modem：调试解调器 ，光猫，将光信号和数字信号进行相互转换  </p>
+<h2 id="进入Cisco仿真操作"><a href="#进入Cisco仿真操作" class="headerlink" title="进入Cisco仿真操作"></a>进入Cisco仿真操作</h2><p>【网络设备的三大基本模式】<br>Router&gt;  –用户模式，衡量一台设备是否正常运行<br>Router&gt;enable<br>Router#  –特权模式，只能查看代码，不能配置代码，用于通信测  试，ping指令<br>Router#configure terminal<br>Router(config)# –配置模式，可以进行代码的设置<br>Router(config)#hostname ND-NB666  —更改设备名称<br>exit  –返回上一级<br>end  –不管处于什么模式，马上回到特权模式<br><img src="/./picture/2.png" alt="Cisco"></p>
+<p>【脚本语言的特点】<br>①一行代码，一个结果<br>②代码可以缩写<br>③代码不区分大小写<br>④可以使用？提示代码<br>⑤可以使用TAB键自动补全代码<br>⑥错误的地方可以准确提示  </p>
+<p>ND-NB666(config)#int f0&#x2F;0  -进入物理接口，编号f0&#x2F;0<br>ND-NB666(config-if)#no shutdown  –打开接口<br>ND-NB666(config-if)#ip address 10.1.1.1 255.0.0.0  –配置IP地址，后面跟上掩码<br>Router(config-if)#no ip address   –删除代码是相同模式下，相应命令前加no(no ip address不用加ip地址和掩码)<br><img src="/./picture/4.png" alt="Cisco"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/04/26/CiscoNote1/" data-id="clvgtpd9w000048c20obud2o8" data-title="CiscoNote1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-关于Markdown语法的学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/11/02/%E5%85%B3%E4%BA%8EMarkdown%E8%AF%AD%E6%B3%95%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
@@ -226,7 +276,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li></ul>
     </div>
   </div>
 
@@ -237,6 +287,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/04/26/CiscoNote1/">CiscoNote1</a>
+          </li>
         
           <li>
             <a href="/2023/11/02/%E5%85%B3%E4%BA%8EMarkdown%E8%AF%AD%E6%B3%95%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">关于Markdown语法的学习笔记</a>
@@ -259,7 +313,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 John Doe<br>
+      &copy; 2024 John Doe<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
